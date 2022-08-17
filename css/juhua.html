@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        margin: 100px auto;
+        width: 30px;
+        height: 30px;
+      }
+      .dot {
+        width: 100%;
+        height: 100%;
+        color: rgb(25, 137, 250);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .dot::before {
+        display: block;
+        width: 2px;
+        height: 25%;
+        margin: 0 auto;
+        background-color: currentColor;
+        border-radius: 40%;
+        content: "";
+      }
+      .dot:nth-child(1) {
+        transform: rotate(30deg);
+        opacity: 1;
+      }
+      .dot:nth-child(2) {
+        transform: rotate(60deg);
+        opacity: 0.9375;
+      }
+      .dot:nth-child(3) {
+        transform: rotate(90deg);
+        opacity: 0.875;
+      }
+      .dot:nth-child(4) {
+        transform: rotate(120deg);
+        opacity: 0.8125;
+      }
+      .dot:nth-child(5) {
+        transform: rotate(150deg);
+        opacity: 0.75;
+      }
+      .dot:nth-child(6) {
+        transform: rotate(180deg);
+        opacity: 0.6875;
+      }
+      .dot:nth-child(7) {
+        transform: rotate(210deg);
+        opacity: 0.625;
+      }
+      .dot:nth-child(8) {
+        transform: rotate(240deg);
+        opacity: 0.5625;
+      }
+      .dot:nth-child(9) {
+        transform: rotate(270deg);
+        opacity: 0.5;
+      }
+      .dot:nth-child(10) {
+        transform: rotate(300deg);
+        opacity: 0.4375;
+      }
+      .dot:nth-child(11) {
+        transform: rotate(330deg);
+        opacity: 0.375;
+      }
+      .dot:nth-child(12) {
+        transform: rotate(360deg);
+        opacity: 0.3125;
+      }
+      .animation {
+        animation-name: spinner;
+        animation-duration: 1.2s;
+        animation-delay: 0;
+        animation-timing-function: steps(12);
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+      }
+      @keyframes spinner {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box animation">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </body>
+</html>
